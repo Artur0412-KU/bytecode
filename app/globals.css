@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,15 +9,24 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, serif;
+}
+
+.client-block-black {
+  padding: 29px;
+  background: linear-gradient(90deg, #2F3138, #1D1F27);
+  border-image: linear-gradient(90deg, #979797, #58595D) 1;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.client-block-blue {
+  padding: 29px;
+  border-width: 1px;
+  border-style: solid;
+  background: linear-gradient(90deg, #183953, #0F293D);
+  border-image: linear-gradient(90deg, #459BDD, #054F77) 1;
 }
