@@ -3,6 +3,7 @@ import Button from "@/components/Button/Button";
 import Image from "next/image";
 import MonitoringSvg from "@/public/main/monitoring_right.svg";
 
+{/* eslint-disable react/no-unescaped-entities */}
 const Main = () => {
     return (
         <div

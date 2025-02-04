@@ -4,7 +4,7 @@ import GrayBox from '../../../public/icons/security/test/gray.svg'
 import WhiteBox from '../../../public/icons/security/test/white.svg'
 import Image from "next/image";
 
-
+{/* eslint-disable react/no-unescaped-entities */}
 const Test = () => {
     return (
         <div className='p-[64px] flex flex-col items-center justify-center gap-[44px] max-lg:p-[32px]'>

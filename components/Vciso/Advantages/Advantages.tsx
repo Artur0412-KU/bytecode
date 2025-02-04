@@ -4,6 +4,7 @@ import {advItems} from "@/data/data";
 import Tick from '../../../public/icons/tick.svg'
 import Image from "next/image";
 
+{/* eslint-disable react/no-unescaped-entities */}
 const Advantages = () => {
     return (
         <div className='p-[64px] text-center flex flex-col gap-[43px] max-lg:p-[32px]'>

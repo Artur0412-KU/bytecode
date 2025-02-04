@@ -1,5 +1,6 @@
 import React from 'react';
 
+{/* eslint-disable react/no-unescaped-entities */}
 const Benefits = () => {
     return (
         <div className='p-[64px] flex flex-col items-center gap-[44px] max-lg:p-[32px]' id='benefit'>

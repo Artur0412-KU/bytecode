@@ -3,6 +3,7 @@ import Button from "@/components/Button/Button";
 import Image from "next/image";
 import MainSvg from '../../../public/main/main_right.svg'
 
+{/* eslint-disable react/no-unescaped-entities */}
 const Discover = () => {
     return (
         <div className='p-[64px] bg-black text-white flex flex-row items-center justify-between max-lg:p-[32px] max-sm:flex-col max-sm:gap-[16px]'>
