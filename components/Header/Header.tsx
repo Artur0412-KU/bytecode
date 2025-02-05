@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Header = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
-    const detailsRef=  useRef<Array<(HTMLDetailsElement | null)[]>>([])
+    const detailsRef=  useRef<(HTMLDetailsElement | null)[]>([])
 
     const handleIndexChange = (index: number) => {
         if (activeIndex === index) {
@@ -34,7 +34,6 @@ const Header = () => {
                         <li key={item.id}>
                             <details
                                 ref={(e) => {
-                                    // @ts-ignore
                                     detailsRef.current[index] = e;
                                 }}
                                 open={activeIndex === index}
@@ -80,7 +79,6 @@ const Header = () => {
                             <li key={item.id}>
                                 <details
                                     ref={(e) => {
-                                        // @ts-ignore
                                         detailsRef.current[index] = e;
                                     }}
                                     open={activeIndex === index}
