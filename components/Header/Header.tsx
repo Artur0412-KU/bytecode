@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, {useRef, useState} from 'react';
 import Logo from '../../public/main/header_logo.svg'
 import Image from "next/image";
 import BurgerClose from '../../public/icons/close.svg'
@@ -8,31 +8,53 @@ import navItems from "@/data/nav";
 import Link from "next/link";
 
 const Header = () => {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+    const detailsRef=  useRef<Array<HTMLDetailsElement | null>>([])
+
+    const handleIndexChange = (index: number) => {
+        if (activeIndex === index) {
+            setActiveIndex(null)
+            detailsRef.current[index]?.removeAttribute('open')
+        } else {
+            setActiveIndex(index);
+            detailsRef.current.forEach((details, i) => {
+                if (i !==index && details) {
+                    details.removeAttribute('open')
+                }
+            })
+            detailsRef.current[index]?.setAttribute("open", "true");
+        }
+    };
+
+    console.log(activeIndex)
     return (
-        <div className="navbar bg-base-100 bg-black flex items-center justify-between py-[20px] px-[65px]  max-sm:px-[40px] border-b-[1px] border-b-[#333436]">
+        <div
+            className="navbar bg-base-100 bg-black flex items-center justify-between py-[20px] px-[65px]  max-sm:px-[40px] border-b-[1px] border-b-[#333436]">
             <div>
                 <Link href={'/'}>
-                    <Image src={Logo} alt='logo' />
+                    <Image src={Logo} alt='logo'/>
                 </Link>
-
             </div>
             <div className="flex-none max-lg:hidden">
                 <ul className='text-white font-Inter text-[16px] menu menu-horizontal px-1 flex items-center justify-between gap-[50px]'>
-
-                    {navItems.map((item) => (
+                    {navItems.map((item, index) => (
                         <li key={item.id}>
-                            <details>
-                                <summary className='hover:text-[#459BDD]'>{item.name}</summary>
-                                    <ul className="bg-base-100 rounded-t-none p-2 bg-black w-[240px] mt-[100px]">
-                                        {item.list.map((subItem, index) => (
-                                            <li key={index} className="whitespace-nowrap">
-                                                <a href={subItem.link}
-                                                   className="hover:text-[#459BDD]">{subItem.title}</a>
-                                            </li>
-                                        ))}
-                                    </ul>
-
-
+                            <details
+                                ref={(e) => (detailsRef.current[index] = e!)}
+                                open={activeIndex === index}
+                            >
+                                <summary className='hover:text-[#459BDD]' onClick={(e) => {
+                                    e.preventDefault()
+                                    handleIndexChange(index)
+                                }}>{item.name}</summary>
+                                <ul className="bg-base-100 rounded-t-none p-2 bg-black w-[240px] mt-[10px]">
+                                    {item.list.map((subItem, subIndex) => (
+                                        <li key={subIndex} className="whitespace-nowrap">
+                                            <a href={subItem.link}
+                                               className="hover:text-[#459BDD]">{subItem.title}</a>
+                                        </li>
+                                    ))}
+                                </ul>
                             </details>
                         </li>
                     ))}
@@ -44,10 +66,10 @@ const Header = () => {
             </button>
 
             <div className={`hidden max-lg:drawer max-lg:drawer-end max-lg:justify-end`}>
-            <input id="my-drawer-4" type="checkbox" className="drawer-toggle"/>
+                <input id="my-drawer-4" type="checkbox" className="drawer-toggle"/>
                 <div className="drawer-content w-[32px]">
                     <label htmlFor="my-drawer-4" className="drawer-button">
-                        <Image src={BurgerMenu} alt={''} />
+                        <Image src={BurgerMenu} alt={''}/>
                     </label>
                 </div>
                 <div className="drawer-side">
@@ -58,14 +80,21 @@ const Header = () => {
                                 <Image src={BurgerClose} alt="close" className='w-[32px]'/>
                             </label>
                         </li>
-                        {navItems.map((item) => (
+                        {navItems.map((item, index) => (
                             <li key={item.id}>
-                                <details>
-                                    <summary className='hover:text-[#459BDD]'>{item.name}</summary>
+                                <details
+                                    ref={(e) => (detailsRef.current[index] = e!)}
+                                    open={activeIndex === index}
+                                >
+                                    <summary className='hover:text-[#459BDD]' onClick={(e) => {
+                                        e.preventDefault()
+                                        handleIndexChange(index)
+                                    }}>{item.name}</summary>
                                     <ul className="bg-base-100 rounded-t-none p-2 bg-black">
                                         {item.list.map((subItem, index) => (
                                             <li key={index}>
-                                                <a href={subItem.link} className="hover:text-[#459BDD]">{subItem.title}</a>
+                                                <a href={subItem.link}
+                                                   className="hover:text-[#459BDD]">{subItem.title}</a>
                                             </li>
                                         ))}
                                     </ul>
