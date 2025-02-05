@@ -4,11 +4,11 @@ import Button from "@/components/Button/Button";
 const Main = () => {
     return (
         <div className='bg-main-section h-full w-[100%] p-[64px] flex flex-row gap-[99px] max-sm:gap-[50px] justify-between max-lg:flex-col max-sm:p-[32px]'>
-            <div className='flex items-start flex-col gap-[12px] w-1/2 max-lg:w-full'>
+            <div className='flex items-start flex-col gap-[20px] w-1/2 max-lg:w-full'>
                 <h3 className='text-[16px] tracking-[0.15em] text-white'>Provable Trust For All</h3>
                 <h1 className='text-[50px] font-semibold text-white max-sm:text-[32px]'>ByteCode <span
                     className='text-[#459BDD]'>Security</span> Labs</h1>
-                <p className='text-[16px] text-[#B1B1B1] max-sm:text-[14px]'>is a leading provider of cybersecurity services, dedicated to
+                <p className='text-[18px] text-[#B1B1B1] max-lg:text-[16px] max-sm:text-[14px]'>is a leading provider of cybersecurity services, dedicated to
                     protecting your digital assets and ensuring the security of your information systems. Our team of
                     experts delivers comprehensive security solutions tailored to meet the evolving challenges of the
                     digital age.</p>
