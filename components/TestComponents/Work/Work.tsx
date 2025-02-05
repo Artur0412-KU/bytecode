@@ -29,8 +29,10 @@ const Work = () => {
                                 needs.</p>
                         </div>
                     </div>
-                    <p className='text-[#777777]'>On average, it takes from 10 to 15 business days to complete the pentest.</p>
-                    <div>
+
+                    <div className='flex flex-col items-start gap-[15px]'>
+                        <p className='text-[#777777]'>On average, it takes from 10 to 15 business days to complete the
+                            pentest.</p>
                         <Button text={'Request a Quote'}/>
                     </div>
 

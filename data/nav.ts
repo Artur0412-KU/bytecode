@@ -3,8 +3,11 @@ const navItems = [
         id: 1,
         name: 'Solutions',
         list: [
-            { title: 'About Us', link: '/company' },
-            { title: 'Contact Us', link: '/company#contact' }
+            { title: 'Security Testing', link: '/services/security/test'},
+            { title: 'DevSecOps', link: '/services/security/devops' },
+            { title: 'vCISO', link: '/services/security/vciso' },
+            { title: 'Security Monitoring', link: '/services/security/monitoring' },
+            { title: 'Security Response Team', link: '/services/security/response' }
         ]
     },
     {

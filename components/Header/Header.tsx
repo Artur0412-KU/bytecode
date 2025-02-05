@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, {useState} from 'react';
 import Logo from '../../public/main/header_logo.svg'
 import Image from "next/image";
 import BurgerClose from '../../public/icons/close.svg'
@@ -7,6 +8,12 @@ import navItems from "@/data/nav";
 import Link from "next/link";
 
 const Header = () => {
+    // const [activeIndex, setActiveIndex] = useState<number | null >(null)
+    //
+    // const handleClick = (index: number) => {
+    //     setActiveIndex(prevIndex => (prevIndex === index ? null : index));
+    //     console.log(index);
+    // }
     return (
         <div className="navbar bg-base-100 bg-black flex items-center justify-between py-[20px] px-[65px]  max-sm:px-[40px] border-b-[1px] border-b-[#333436]">
             <div>
@@ -16,19 +23,22 @@ const Header = () => {
 
             </div>
             <div className="flex-none max-lg:hidden">
-                <ul className='text-white font-Inter text-[16px] menu menu-horizontal px-1 flex items-center justify-between gap-[20px]'>
+                <ul className='text-white font-Inter text-[16px] menu menu-horizontal px-1 flex items-center justify-between gap-[50px]'>
 
                     {navItems.map((item) => (
                         <li key={item.id}>
                             <details>
                                 <summary className='hover:text-[#459BDD]'>{item.name}</summary>
-                                <ul className="bg-base-100 rounded-t-none p-2 bg-black">
-                                    {item.list.map((subItem, index) => (
-                                        <li key={index}>
-                                            <a href={subItem.link} className="hover:text-[#459BDD]">{subItem.title}</a>
-                                        </li>
-                                    ))}
-                                </ul>
+                                    <ul className="bg-base-100 rounded-t-none p-2 bg-black w-[240px] mt-[100px]">
+                                        {item.list.map((subItem, index) => (
+                                            <li key={index} className="whitespace-nowrap">
+                                                <a href={subItem.link}
+                                                   className="hover:text-[#459BDD]">{subItem.title}</a>
+                                            </li>
+                                        ))}
+                                    </ul>
+
+
                             </details>
                         </li>
                     ))}
