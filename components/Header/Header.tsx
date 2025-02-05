@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import Logo from '../../public/main/header_logo.svg'
 import Image from "next/image";
@@ -16,19 +17,22 @@ const Header = () => {
 
             </div>
             <div className="flex-none max-lg:hidden">
-                <ul className='text-white font-Inter text-[16px] menu menu-horizontal px-1 flex items-center justify-between gap-[20px]'>
+                <ul className='text-white font-Inter text-[16px] menu menu-horizontal px-1 flex items-center justify-between gap-[50px]'>
 
                     {navItems.map((item) => (
                         <li key={item.id}>
                             <details>
                                 <summary className='hover:text-[#459BDD]'>{item.name}</summary>
-                                <ul className="bg-base-100 rounded-t-none p-2 bg-black">
-                                    {item.list.map((subItem, index) => (
-                                        <li key={index}>
-                                            <a href={subItem.link} className="hover:text-[#459BDD]">{subItem.title}</a>
-                                        </li>
-                                    ))}
-                                </ul>
+                                    <ul className="bg-base-100 rounded-t-none p-2 bg-black w-[240px] mt-[100px]">
+                                        {item.list.map((subItem, index) => (
+                                            <li key={index} className="whitespace-nowrap">
+                                                <a href={subItem.link}
+                                                   className="hover:text-[#459BDD]">{subItem.title}</a>
+                                            </li>
+                                        ))}
+                                    </ul>
+
+
                             </details>
                         </li>
                     ))}
