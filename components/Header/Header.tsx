@@ -1,5 +1,5 @@
 "use client"
-import Reactfrom 'react';
+import React from 'react';
 import Logo from '../../public/main/header_logo.svg'
 import Image from "next/image";
 import BurgerClose from '../../public/icons/close.svg'
