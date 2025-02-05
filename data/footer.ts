@@ -4,7 +4,6 @@ const footerItems = [
         name: 'Company',
         list: [
             { title: 'About Us', link: '/company' },
-            { title: 'Certifications', link: '/company' },
             { title: 'Contact Us', link: '/company' }
         ]
     },
@@ -16,7 +15,6 @@ const footerItems = [
             { title: 'DevSecOps', link: '/services/security/devops' },
             { title: 'vCISO', link: '/services/security/vciso' },
             { title: 'Security Monitoring', link: '/services/security/monitoring' },
-            { title: 'Company TestComponents', link: '/services/security/company' },
             { title: 'Security Response Team', link: '/services/security/response' }
         ]
     },

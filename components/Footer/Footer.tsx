@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../public/main/header_logo.svg'
 import Image from "next/image";
-import footer from "@/data/footer";
+import footerItems from "@/data/footer";
 import Link from "next/link";
 
 const Footer = () => {
@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
 
                 <div className='flex items-start justify-between w-full mb-[16px] max-lg:grid grid-cols-2 max-lg:gap-[20px] max-sm:gap-[40px] max-sm:grid-cols-1'>
-                    {footer.map((item, index) => (
+                    {footerItems.map((item, index) => (
                         <div key={index} className="flex items-start flex-col text-[16px] gap-[22px] max-sm:items-center">
                             <h1 className="font-semibold">{item.name}</h1>
                             <ul className="flex items-start flex-col text-[16px] gap-[22px] max-sm:items-center">

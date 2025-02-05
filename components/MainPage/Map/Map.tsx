@@ -12,13 +12,13 @@ const Map = () => {
     return (
         <div className='py-[69px] px-[64px] text-center max-lg:p-[32px]'>
             <h3>Market trust us</h3>
-            <div className='flex flex-row items-center justify-between content-center pt-[16px] gap-[10px] max-lg:grid max-lg:grid-cols-3 max-sm:flex max-sm:flex-col max-sm:gap-[15px]'>
-                <Image src={Outposts} alt=''/>
-                <Image src={Rokkex} alt='' />
-                <Image src={Lunch} alt='' />
-                <Image src={Badm} alt='' />
-                <Image src={Izibank} alt=''/>
-                <Image src={Sme} alt=''/>
+            <div className='flex flex-row items-center justify-between content-center pt-[16px] gap-[10px] max-lg:grid max-lg:grid-cols-3 max-lg:grid-auto-flow-dense max-sm:flex max-sm:flex-col max-sm:gap-[20px]'>
+                <Image src={Outposts} alt='' className='max-lg:w-full max-sm:w-[75%]'/>
+                <Image src={Rokkex} alt='' className='max-lg:w-full max-sm:w-[75%]'/>
+                <Image src={Lunch} alt='' className='max-lg:w-full max-sm:w-[75%]'/>
+                <Image src={Badm} alt='' className='max-lg:w-full max-sm:w-[75%]'/>
+                <Image src={Izibank} alt=''className='max-lg:w-full max-sm:w-[75%]'/>
+                <Image src={Sme} alt=''className='max-lg:w-full max-sm:w-[75%]'/>
             </div>
 
             <div className='flex flex-col pt-[24px] gap-[24px] max-lg:pt-[32px] max-sm:pt-[48px]'>
