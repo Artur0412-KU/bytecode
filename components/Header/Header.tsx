@@ -9,20 +9,13 @@ import Link from "next/link";
 
 const Header = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
-    const detailsRef=  useRef<Array<HTMLDetailsElement | null>>([])
+    const detailsRef=  useRef<Array<(HTMLDetailsElement | null)[]>>([])
 
     const handleIndexChange = (index: number) => {
         if (activeIndex === index) {
-            setActiveIndex(null)
-            detailsRef.current[index]?.removeAttribute('open')
+            setActiveIndex(null);
         } else {
             setActiveIndex(index);
-            detailsRef.current.forEach((details, i) => {
-                if (i !==index && details) {
-                    details.removeAttribute('open')
-                }
-            })
-            detailsRef.current[index]?.setAttribute("open", "true");
         }
     };
 
@@ -40,7 +33,10 @@ const Header = () => {
                     {navItems.map((item, index) => (
                         <li key={item.id}>
                             <details
-                                ref={(e) => (detailsRef.current[index] = e!)}
+                                ref={(e) => {
+                                    // @ts-ignore
+                                    detailsRef.current[index] = e;
+                                }}
                                 open={activeIndex === index}
                             >
                                 <summary className='hover:text-[#459BDD]' onClick={(e) => {
@@ -83,7 +79,10 @@ const Header = () => {
                         {navItems.map((item, index) => (
                             <li key={item.id}>
                                 <details
-                                    ref={(e) => (detailsRef.current[index] = e!)}
+                                    ref={(e) => {
+                                        // @ts-ignore
+                                        detailsRef.current[index] = e;
+                                    }}
                                     open={activeIndex === index}
                                 >
                                     <summary className='hover:text-[#459BDD]' onClick={(e) => {
