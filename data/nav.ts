@@ -4,7 +4,6 @@ const navItems = [
         name: 'Solutions',
         list: [
             { title: 'About Us', link: '/company' },
-            { title: 'Certifications', link: '/company' },
             { title: 'Contact Us', link: '/company#contact' }
         ]
     },
@@ -23,20 +22,11 @@ const navItems = [
         name: 'Company',
         list: [
             { title: 'About Us', link: '/company' },
-            { title: 'Certifications', link: '/company' },
             { title: 'Contact Us', link: '/company#contact' }
         ]
     },
     {
         id: 4,
-        name: 'Cases',
-        list: [
-            { title: 'Case Study 1', link: '/cases/case-1' },
-            { title: 'Case Study 2', link: '/cases/case-2' }
-        ]
-    },
-    {
-        id: 5,
         name: 'Partners',
         list: [
             { title: 'Become a Partner', link: '/partners' },
