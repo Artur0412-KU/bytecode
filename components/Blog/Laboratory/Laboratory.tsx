@@ -6,7 +6,7 @@ const Laboratory = () => {
     return (
         <div>
             <h1 className='text-[45px] font-semibold mb-[15px] max-lg:text-[32px]'>Laboratory</h1>
-            <div className='flex flex-col gap-[44px]'>
+            <div className='grid grid-cols-2 gap-[44px] max-lg:flex max-lg:flex-col'>
                 {laboratoryData.map((item) => (
                     <Card item={item} key={item.id} />
                 ))}
