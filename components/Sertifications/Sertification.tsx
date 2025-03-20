@@ -6,13 +6,6 @@ import AtxImg from '@/public/icons/certifications/atx.png'
 import CehImg from '@/public/icons/certifications/ceh.png'
 import CiscoImg from '@/public/icons/certifications/cisco.png'
 import EmartImg from '@/public/icons/certifications/emart.png'
-import OneTrsutImg1 from '@/public/icons/certifications/onetrust.png'
-import OneTrsutImg2 from '@/public/icons/certifications/onetrust2.png'
-import OneTrsutImg3 from '@/public/icons/certifications/onetrust3.png'
-import OnseImg from '@/public/icons/certifications/osce.png'
-import OscpImg from '@/public/icons/certifications/oscp.png'
-import SaImg from '@/public/icons/certifications/sa.png'
-import TmcpImg from '@/public/icons/certifications/tmcp.png'
 
 const Sertification = () => {
     return (
