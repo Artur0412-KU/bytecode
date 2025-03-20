@@ -25,7 +25,8 @@ const navItems = [
         name: 'Company',
         list: [
             { title: 'About Us', link: '/company' },
-            { title: 'Contact Us', link: '/company#contact' }
+            { title: 'Contact Us', link: '/company#contact' },
+            { title: 'Certifications', link: '/certifications' },
         ]
     },
     {

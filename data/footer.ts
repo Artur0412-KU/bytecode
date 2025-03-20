@@ -4,7 +4,8 @@ const footerItems = [
         name: 'Company',
         list: [
             { title: 'About Us', link: '/company' },
-            { title: 'Contact Us', link: '/company' }
+            { title: 'Contact Us', link: '/company' },
+            { title: 'Certifications', link: '/certifications' },
         ]
     },
     {
