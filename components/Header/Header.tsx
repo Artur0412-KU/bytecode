@@ -55,10 +55,14 @@ const Header = () => {
                     ))}
                 </ul>
             </div>
-            <button
+            <div className='flex items-center gap-[20px]'>
+               <button
                 className='border-[1px] border-white text-[16px] px-[15px] py-[10px] font-Inter text-white hover:bg-[#459BDD] hover:border-[#459BDD] transition max-lg:hidden'>Request
                 a Quote
-            </button>
+               </button> 
+               <button className='text-white bg-[#0079BA] px-[20px] py-[10px] transition hover:bg-[#73BDF5]'>Sign In</button>
+            </div>
+            
 
             <div className={`hidden max-lg:drawer max-lg:drawer-end max-lg:justify-end`}>
                 <input id="my-drawer-4" type="checkbox" className="drawer-toggle"/>
