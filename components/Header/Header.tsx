@@ -55,9 +55,9 @@ const Header = () => {
                     ))}
                 </ul>
             </div>
-            <div className='flex items-center gap-[20px]'>
+            <div className='flex items-center gap-[20px] max-lg:hidden'>
                <button
-                className='border-[1px] border-white text-[16px] px-[15px] py-[10px] font-Inter text-white hover:bg-[#459BDD] hover:border-[#459BDD] transition max-lg:hidden'>Request
+                className='border-[1px] border-white text-[16px] px-[15px] py-[10px] font-Inter text-white hover:bg-[#459BDD] hover:border-[#459BDD] transition'>Request
                 a Quote
                </button> 
                <button className='text-white bg-[#0079BA] px-[20px] py-[10px] transition hover:bg-[#73BDF5]'>Sign In</button>
@@ -102,11 +102,12 @@ const Header = () => {
                                 </details>
                             </li>
                         ))}
-                        <li>
+                        <li className='flex flex-col items-center gap-[20px]'>
                             <button
                                 className='border-[1px] border-white text-[16px] px-[15px] py-[10px] font-Inter text-white hover:bg-[#459BDD] hover:border-[#459BDD] hover:text-white transition w-[55%] text-center'>Request
                                 a Quote
                             </button>
+                            <button className='text-white text-center bg-[#0079BA] px-[20px] py-[10px] text-[16px] transition hover:bg-[#73BDF5] w-[55%] flex justify-center'>Sign In</button>
                         </li>
                     </ul>
                 </div>
